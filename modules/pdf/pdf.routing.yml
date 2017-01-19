@@ -1,0 +1,24 @@
+
+pdf.default_controller_hello:
+  path: '/pdf/hello/{name}'
+  defaults:
+    _controller: '\Drupal\pdf\Controller\DefaultController::hello'
+    _title: 'hello'
+  requirements:
+    _permission: 'access content'
+    
+pdf.default_form:
+  path: '/pdf/form/default'
+  defaults:
+    _form: '\Drupal\pdf\Form\DefaultForm'
+    _title: 'DefaultForm'
+  requirements:
+    _access: 'TRUE'
+  
+mymodules.default_controller_hello_nadir_twig:
+  path: '/twig/{name}'
+  defaults:
+    _controller: '\Drupal\pdf\Controller\DefaultController::twig'
+    _title: 'Modules Title With Symfony 2'
+  requirements:
+    _permission: 'access content'

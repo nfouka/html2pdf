@@ -1,0 +1,7 @@
+services:
+  pdf.pdf_default:
+    class: Drupal\pdf\Command\DefaultCommand
+    arguments: []
+    tags:
+      - { name: drupal.command }
+

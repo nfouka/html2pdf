@@ -1,0 +1,34 @@
+<?php
+
+/**
+ * @file
+ * Contains pdf.module.
+ */
+
+use Drupal\Core\Routing\RouteMatchInterface;
+
+/**
+ * Implements hook_help().
+ */
+function pdf_help($route_name, RouteMatchInterface $route_match) {
+  switch ($route_name) {
+    // Main module help for the pdf module.
+    case 'help.page.pdf':
+      $output = '';
+      $output .= '<h3>' . t('About') . '</h3>';
+      $output .= '<p>' . t('My Awesome Module') . '</p>';
+      return $output;
+
+    default:
+  }
+}
+
+ function pdf_theme() {
+    $theme['hello_page'] = [
+      'variables' => ['name' => NULL  ],
+      'template' => 'hello'
+    ];
+
+    return $theme;
+  }
+
